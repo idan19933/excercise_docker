@@ -2,8 +2,8 @@ FROM python
 
 WORKDIR /app
 
-COPY eccomerce /app
+COPY . /app
 
 RUN pip install -r "requirements.txt"
 
-CMD ["python", "./manage.py runserver"]
+CMD ["python", "./manage.py", "runserver"]

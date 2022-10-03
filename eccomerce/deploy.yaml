@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-webapp
+spec:
+  containers:
+    - name: django-web
+      image: idanshan/django-web:v1.0.0
+      commands: ["python"]
+      args: ["./manage.py runserver 0.0.0.0:80"]
+      ports:
+        - containerPort: 80
